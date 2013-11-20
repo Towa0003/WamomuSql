@@ -1,7 +1,7 @@
 
 
 <?php
-$con=mysqli_connect("localhost","root","","wamomu");
+$con=mysqli_connect("localhost","wamomu","wamomu","wamomu");
 // Check connection
 if (mysqli_connect_errno())
   {

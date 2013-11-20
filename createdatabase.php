@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","");
+$con=mysqli_connect("localhost","wamomu","wamomu");
 // Check connection
 if (mysqli_connect_errno())
   {

@@ -1,6 +1,6 @@
 <?php
 
-      mysql_connect("localhost","root","");
+      mysql_connect("localhost","wamomu","wamomu");
 
       mysql_select_db("wamomu");
 

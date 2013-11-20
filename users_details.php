@@ -1,7 +1,7 @@
 <?php
 $host="localhost"; //replace with database hostname 
-$username="root"; //replace with database username 
-$password=""; //replace with database password 
+$username="wamomu"; //replace with database username 
+$password="wamomu"; //replace with database password 
 $db_name="wamomu"; //replace with database name
  
 $con=mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
