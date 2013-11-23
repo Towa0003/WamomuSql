@@ -9,17 +9,17 @@ if (mysqli_connect_errno())
 
   
 $sql="
-      DROP TABLE users 
-
+	  DROP TABLE measurements
+		
 ";
 
 // Execute query
 if (mysqli_query($con,$sql))
   {
-  echo "Table users droped successfully";
+  echo "Table measurements droped successfully";
   }
 else
   {
-  echo "Error creating table: " . mysqli_error($con);
+  echo "Error dropping table: " . mysqli_error($con);
   }
 ?>

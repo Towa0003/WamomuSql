@@ -10,15 +10,11 @@ if (mysqli_connect_errno())
   
   // Create table
 $sql="
-      CREATE TABLE users (
-   
-      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-	  
-	  user VARCHAR( 100 ) NOT NULL ,
-   
-      password VARCHAR( 100 ) NOT NULL 
-   
-      )
+CREATE TABLE IF NOT EXISTS wamomu.users (
+  id INT NOT NULL AUTO_INCREMENT,
+  user VARCHAR(45) NULL,
+  password VARCHAR(45) NULL,
+  PRIMARY KEY (id))
 ";
 
 // Execute query
@@ -31,3 +27,4 @@ else
   echo "Error creating table: " . mysqli_error($con);
   }
 ?>
+

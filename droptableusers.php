@@ -9,17 +9,17 @@ if (mysqli_connect_errno())
 
   
 $sql="
-      DROP DATABASE wamomu
-
+	  DROP TABLE users
+		
 ";
 
 // Execute query
 if (mysqli_query($con,$sql))
   {
-  echo "Database wamomu dropped successfully";
+  echo "Table users droped successfully";
   }
 else
   {
-  echo "Error creating database: " . mysqli_error($con);
+  echo "Error dropping table: " . mysqli_error($con);
   }
 ?>
