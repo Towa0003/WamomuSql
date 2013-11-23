@@ -6,7 +6,15 @@ $db_name="wamomu"; //replace with database name
  
 $con=mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
-$sql = "select * from users join measurements join meals"; 
+$sql = "select * from users join measurements "; 
+if (mysql_query($sql,$con))
+  {
+  echo "Statement: ";
+  }
+else
+  {
+  echo "Error Statement: " . mysql_error($con);
+  }
 $result = mysql_query($sql);
 $json = array();
  
@@ -15,6 +23,7 @@ while($row=mysql_fetch_assoc($result)){
 $json['users'][]=$row;
 }
 }
+
 mysql_close($con);
 echo json_encode($json); 
 ?> 

@@ -16,7 +16,7 @@ $sql="
 // Execute query
 if (mysqli_query($con,$sql))
   {
-  echo "Table meals droped successfully";
+  echo "Table meals dropped successfully";
   }
 else
   {

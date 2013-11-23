@@ -16,7 +16,7 @@ $sql="
 // Execute query
 if (mysqli_query($con,$sql))
   {
-  echo "Table measurements droped successfully";
+  echo "Table measurements dropped successfully";
   }
 else
   {

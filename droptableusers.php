@@ -16,7 +16,7 @@ $sql="
 // Execute query
 if (mysqli_query($con,$sql))
   {
-  echo "Table users droped successfully";
+  echo "Table users dropped successfully";
   }
 else
   {
