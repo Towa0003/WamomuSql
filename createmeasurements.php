@@ -14,14 +14,14 @@ $sql="
 -- -----------------------------------------------------
 -- Table `wamomu`.`measurements`
 -- -----------------------------------------------------
-CREATE measurements (
-  'mvalue' INT NOT NULL,
-  'date' DECIMAL NOT NULL,
-  'users_id' INT NOT NULL,
-  PRIMARY KEY (`users_id`),
-  CONSTRAINT `fk_measurements_users`
-    FOREIGN KEY (`users_id`)
-    REFERENCES `wamomu`.`users` (`id`)
+CREATE TABLE measurements (
+  mvalue INT NOT NULL,
+  date DECIMAL NOT NULL,
+  users_id INT NOT NULL,
+  PRIMARY KEY ( users_id ),
+  CONSTRAINT fk_measurements_users`
+    FOREIGN KEY (users_id)
+    REFERENCES wamomu.users ( id )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 
