@@ -12,7 +12,7 @@ $sql="
 -- Table wamomu.meals
 -- -----------------------------------------------------
 CREATE TABLE meals (
-  mealkind VARCHAR(20) NOT NULL,
+  mealkind CHAR(20) NOT NULL,
   date DECIMAL NOT NULL,
   users_id INT NOT NULL,
   PRIMARY KEY (users_id),
