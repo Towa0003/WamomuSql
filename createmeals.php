@@ -9,16 +9,16 @@ if (mysqli_connect_errno())
 $sql="
 
 -- -----------------------------------------------------
--- Table wamomu.measurements
+-- Table wamomu.meals
 -- -----------------------------------------------------
-CREATE TABLE measurements (
-  mvalue INT NOT NULL,
+CREATE TABLE meals (
+  mealkind INT NOT NULL,
   date DECIMAL NOT NULL,
   users_id INT NOT NULL,
-  PRIMARY KEY ( users_id ),
-  CONSTRAINT fk_measurements_users
+  PRIMARY KEY (users_id),
+  CONSTRAINT fk_meals_users1
     FOREIGN KEY (users_id)
-    REFERENCES wamomu.users ( id )
+    REFERENCES wamomu.users (id)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 
@@ -27,7 +27,7 @@ CREATE TABLE measurements (
 // Execute query
 if (mysqli_query($con,$sql))
   {
-  echo "Table measurements created successfully";
+  echo "Table meals created successfully";
   }
 else
   {
