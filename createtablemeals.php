@@ -12,11 +12,11 @@ $sql="
 -- Table wamomu.meals
 -- -----------------------------------------------------
 CREATE TABLE meals (
-  mealkind VARCHAR(45) NOT NULL,
+  mealkind VARCHAR(20) NOT NULL,
   date DECIMAL NOT NULL,
   users_id INT NOT NULL,
   PRIMARY KEY (users_id),
-  CONSTRAINT fk_meals_users1
+  CONSTRAINT fk_meals_users
     FOREIGN KEY (users_id)
     REFERENCES wamomu.users (id)
     ON DELETE NO ACTION

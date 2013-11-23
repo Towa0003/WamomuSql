@@ -6,14 +6,15 @@ $db_name="wamomu"; //replace with database name
  
 $con=mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
-$sql = "select * from users join measurements "; 
-if (mysql_query($sql,$con))
+$sql = "select * FROM meals";
+
+if (mysql_query($sql))
   {
   echo "Statement: ";
   }
 else
   {
-  echo "Error Statement: " . mysql_error($con);
+  echo "Error Statement: " . mysql_error();
   }
 $result = mysql_query($sql);
 $json = array();
