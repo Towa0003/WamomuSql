@@ -12,10 +12,11 @@ $sql="
 -- Table wamomu.measurements
 -- -----------------------------------------------------
 CREATE TABLE measurements (
-  mvalue INT NOT NULL,
-  date DECIMAL NOT NULL,
+  mvalue DECIMAL(3,2) NOT NULL,
+  date DATE NOT NULL,
+  time TIME NOT NULL,
   users_id INT NOT NULL,
-  PRIMARY KEY ( users_id ),
+  PRIMARY KEY ( date, time ),
   CONSTRAINT fk_measurements_users
     FOREIGN KEY (users_id)
     REFERENCES wamomu.users ( id )
