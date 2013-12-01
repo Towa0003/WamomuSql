@@ -7,7 +7,10 @@ if (mysqli_connect_errno())
   }
 
 $sql="INSERT INTO users (id, user, password)
-VALUES ('', 'Test','Testpw')";
+VALUES ('', 'Test','Testpw'),
+('', 'Chris','chmu'),
+('', 'Tobi','towa'),
+('', 'Max','mamo')";
 
 if (!mysqli_query($con,$sql))
   {
