@@ -21,7 +21,7 @@ if (!mysqli_query($con,$sql))
   {
   die('Error: ' . mysqli_error($con));
   }
-echo " record added";
+echo "record added";
 
 mysqli_close($con);
 ?>

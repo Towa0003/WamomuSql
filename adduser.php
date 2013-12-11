@@ -15,10 +15,8 @@ if($passwort==$passwortrepeat){
 $con = mysqli_connect("localhost","wamomu","wamomu","wamomu");
 if (!$con)
   {
-  die('Could not connect: ' . mysqli_error($con));
+	die('Could not connect: ' . mysqli_error($con));
   }
-
-$result = mysqli_query($con,"SELECT * FROM users");
 
 $sql="INSERT INTO users (id, user, password)
 VALUES ('','$nutzername','$passwort')";
