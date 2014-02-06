@@ -12,6 +12,8 @@ if (mysqli_connect_errno())
 $sql="
 CREATE TABLE IF NOT EXISTS wamomu.users (
   id INT NOT NULL AUTO_INCREMENT,
+  vname VARCHAR(45) NULL,
+  nname VARCHAR(45) NULL,
   user VARCHAR(45) NULL,
   password VARCHAR(45) NULL,
   PRIMARY KEY (id))

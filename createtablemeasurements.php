@@ -13,7 +13,7 @@ $sql="
 -- -----------------------------------------------------
 CREATE TABLE measurements (
   measurement_id INT NOT NULL AUTO_INCREMENT,
-  mvalue DECIMAL(3,2) NOT NULL,
+  mvalue DECIMAL(5,2) NOT NULL,
   date DATE NOT NULL,
   time TIME NOT NULL,
   users_id INT NOT NULL,
