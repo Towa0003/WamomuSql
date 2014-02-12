@@ -1,4 +1,6 @@
 <?php
+$vname = strval($_GET['vname']);
+$nname = strval($_GET['nname']);
 $nutzername = strval($_GET['benutzername']);
 $passwort = strval($_GET['passwort']);
 $passwortrepeat = strval($_GET['passwortrepeat']);
@@ -18,8 +20,8 @@ if (!$con)
 	die('Could not connect: ' . mysqli_error($con));
   }
 
-$sql="INSERT INTO users (id, user, password)
-VALUES ('','$nutzername','$passwort')";
+$sql="INSERT INTO users (id, vname, nname, user, password)
+VALUES ('','$vname','$nname','$nutzername','$passwort')";
 
 if (!mysqli_query($con,$sql))
   {
